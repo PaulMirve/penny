@@ -9,9 +9,7 @@ import history from './history';
 export default function App() {
     return (
         <Router history={history}>
-            <div>
-                Hello World!
-            </div>
+            <h1>Hello World!</h1>
         </Router>
     )
 }

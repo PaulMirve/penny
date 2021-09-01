@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/abstract/_mixins.scss","../sass/base/_base.scss"],"names":[],"mappings":"AAsBA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;ACtBA;AAAA;AAAA;EAGI;EACA;EACA;;;AAGJ;EAEI;;;AAGJ;EACI","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/abstract/_mixins.scss","../sass/base/_base.scss","../sass/base/_typography.scss"],"names":[],"mappings":"AAsBA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;ACtBA;AAAA;AAAA;EAGI;EACA;EACA;;;AAGJ;EAEI;;;AAGJ;EACI;;;ACdJ;EACI;EACA;EACA","file":"style.css"}
