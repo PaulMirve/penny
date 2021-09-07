@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Penny from '../../../classes/EpicPenny';
-import penny_trocona from '../../../img/penny-trocona.jpg';
-import penny_void from '../../../img/penny-void.jpg';
-import penny_santa_claus from '../../../img/penny-santa-claus.jpg';
-import penny_hoodie from '../../../img/penny-hoodie.jpg';
-import penny_cojin from '../../../img/penny-cojin.jpg';
 import chevron_down from '../../../img/svg/chevron-down-outline.svg';
 import chevron_up from '../../../img/svg/chevron-up-outline.svg';
 import EpicPenny from './EpicPenny';
@@ -13,11 +8,11 @@ import Button from '../../Button/Button';
 import { db } from '../../../firebase';
 
 const epicPennys = [
-    new Penny(penny_trocona, 'Penny en la trocona', 'Penny que sacó su licencia de conducir y viaja por el mundo en su trocona.', 5),
-    new Penny(penny_void, 'Penny mirando al void', 'Esta Penny esta mirando al void, ha visto cosas que no debió haber visto y ahora esta reflexionando', 2),
-    new Penny(penny_santa_claus, 'Penny Santa Claus', 'Esta Penny ha sido invaida por el espiritu navideño y se ha disfrazado de Santa Claus.', 10),
-    new Penny(penny_cojin, 'Penny arriba del cojín', 'Esta Penny escalo hasta el tope del cojín y se acosto a reposar despues de un día difícil.', 8),
-    new Penny(penny_hoodie, 'Penny con hoodie', 'El hip hop a influenciado a esta Penny y trae una hoodie.', 3),
+    new Penny('../img/penny-trocona.jpg', 'Penny en la trocona', 'Penny que sacó su licencia de conducir y viaja por el mundo en su trocona.', 5),
+    new Penny('../img/penny-void.jpg', 'Penny mirando al void', 'Esta Penny esta mirando al void, ha visto cosas que no debió haber visto y ahora esta reflexionando', 2),
+    new Penny('../img/penny-santa-claus.jpg', 'Penny Santa Claus', 'Esta Penny ha sido invaida por el espiritu navideño y se ha disfrazado de Santa Claus.', 10),
+    new Penny('../img/penny-cojin.jpg', 'Penny arriba del cojín', 'Esta Penny escalo hasta el tope del cojín y se acosto a reposar despues de un día difícil.', 8),
+    new Penny('../img/penny-hoodie.jpg', 'Penny con hoodie', 'El hip hop a influenciado a esta Penny y trae una hoodie.', 3),
 ];
 
 export default function EpicPennys() {
