@@ -181,6 +181,10 @@ body {
 .btn:disabled {
   background-color: #b08968;
 }
+.btn:hover:disabled {
+  transform: translateY(0);
+  box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.1);
+}
 
 .epic-penny {
   display: flex;

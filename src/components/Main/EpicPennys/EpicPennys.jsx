@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Penny from '../../../classes/EpicPenny';
 import penny_trocona from '../../../img/penny-trocona.jpg';
 import penny_void from '../../../img/penny-void.jpg';
@@ -18,8 +18,18 @@ const epicPennys = [
 
 export default function EpicPennys() {
     const [vote, setVote] = useState(null);
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    useEffect(() => {
+        if (localStorage.getItem('voted')) {
+            setVote(localStorage.getItem('voted'));
+        }
+    }, [vote])
+
     const onVote = (vote) => {
         setVote(vote);
+        setModalOpen(true);
+        localStorage.setItem("voted", vote);
     };
 
     return (
@@ -33,7 +43,7 @@ export default function EpicPennys() {
                     })
                 }
             </div>
-            <Modal message="Gracias por votar" isOpen={vote !== null ? true : false} seconds={5} />
+            <Modal message="Gracias por votar" isOpen={isModalOpen} seconds={5} />
         </section>
     )
 }
