@@ -1,19 +1,20 @@
-@import 'abstract/functions';
-@import 'abstract/mixins';
-@import 'abstract/variables';
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
 
-@import 'base/base.scss';
-@import 'base/animations.scss';
-@import 'base/typography.scss';
-@import 'base/utilities.scss';
+@import "base/base.scss";
+@import "base/animations.scss";
+@import "base/typography.scss";
+@import "base/utilities.scss";
 
-@import 'layout/header';
-@import 'layout/know-penny';
-@import 'layout/epic-pennys';
-@import 'layout/footer';
+@import "layout/header";
+@import "layout/know-penny";
+@import "layout/epic-pennys";
+@import "layout/footer";
 
-@import 'components/button';
-@import 'components/epic-penny';
-@import 'components/modal';
+@import "components/button";
+@import "components/epic-penny";
+@import "components/modal";
 
-@import 'pages/home';
+@import "pages/home";
+@import "pages/error404";
