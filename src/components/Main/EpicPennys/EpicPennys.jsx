@@ -10,6 +10,7 @@ import chevron_up from '../../../img/svg/chevron-up-outline.svg';
 import EpicPenny from './EpicPenny';
 import Modal from '../../Modal/Modal';
 import Button from '../../Button/Button';
+import { db } from '../../../firebase';
 
 const epicPennys = [
     new Penny(penny_trocona, 'Penny en la trocona', 'Penny que sacó su licencia de conducir y viaja por el mundo en su trocona.', 5),
@@ -33,7 +34,19 @@ export default function EpicPennys() {
     const onVote = (vote) => {
         setVote(vote);
         setModalOpen(true);
+        updateVotes(vote);
         localStorage.setItem("voted", vote);
+    };
+
+    const updateVotes = async (penny) => {
+        const query = await db.collection('Pennys').get();
+        query.forEach(item => {
+            if (item.data().title === penny) {
+                db.collection("Pennys").doc(item.id).update({
+                    'votes': item.data().votes + 1
+                });
+            }
+        });
     };
 
     return (
