@@ -24,17 +24,20 @@ export default function EpicPennys() {
     const [vote, setVote] = useState(null);
     const [isModalOpen, setModalOpen] = useState(false);
     const [isResultsOpen, setResultsOpen] = useState(false);
+    const [pennys, setPennys] = useState([]);
 
     useEffect(() => {
+        getPennys();
         if (localStorage.getItem('voted')) {
             setVote(localStorage.getItem('voted'));
         }
-    }, [vote])
+    }, [vote, pennys])
 
     const onVote = (vote) => {
         setVote(vote);
         setModalOpen(true);
         updateVotes(vote);
+        getPennys();
         localStorage.setItem("voted", vote);
     };
 
@@ -48,6 +51,13 @@ export default function EpicPennys() {
             }
         });
     };
+
+    const getPennys = async () => {
+        let pennys = [];
+        const query = await db.collection('Pennys').get();
+        query.forEach(penny => pennys.push(penny.data()));
+        setPennys([...pennys.sort((a, b) => b.votes - a.votes)]);
+    }
 
     return (
         <section className="epic-pennys">
@@ -76,7 +86,7 @@ export default function EpicPennys() {
                     </div>
                     <div className="epic-pennys__results-table-content">
                         {
-                            epicPennys.map((penny, index) => {
+                            pennys.map((penny, index) => {
                                 return (
                                     <div key={index}>
                                         <p>{penny.title}</p>
