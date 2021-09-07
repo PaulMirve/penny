@@ -1,0 +1,11 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.6), rgba($color-primary-dark, 0.9));
+    justify-items: center;
+    align-items: center;
+
+    &__photo{
+        justify-self: flex-end;
+    }
+}

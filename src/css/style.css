@@ -29,4 +29,37 @@ body {
   line-height: 1.6;
 }
 
+.heading-1 {
+  font-size: 12rem;
+  letter-spacing: 0.8rem;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+}
+.heading-1--light {
+  color: #ede0d4;
+}
+
+.heading-2 {
+  background-image: linear-gradient(to right, #ddb892, #7f5539);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4.2em;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: linear-gradient(to right bottom, rgba(176, 137, 104, 0.6), rgba(156, 102, 68, 0.9));
+  justify-items: center;
+  align-items: center;
+}
+.header__photo {
+  justify-self: flex-end;
+}
+
 /*# sourceMappingURL=style.css.map */

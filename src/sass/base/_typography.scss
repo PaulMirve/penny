@@ -3,3 +3,22 @@ body {
     font-weight: 400;
     line-height: 1.6;
 }
+
+.heading-1 {
+    font-size: 12rem;
+    letter-spacing: 0.8rem;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+
+    &--light {
+        color: $color-base;
+    }
+}
+
+.heading-2 {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark-2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4.2em;
+}
