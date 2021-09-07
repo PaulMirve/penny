@@ -5,7 +5,15 @@
     justify-items: center;
     align-items: center;
 
+    @include respond(tab-port){
+        grid-template-columns: none;
+    }
+
     &__photo{
         justify-self: flex-end;
+
+        @include respond(tab-port){
+            width: 100%
+        }
     }
 }

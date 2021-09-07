@@ -1,0 +1,13 @@
+.epic-pennys {
+    padding: 4rem 5vw;
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+
+        @include respond(tab-port){
+            grid-template-columns: none;
+        }
+    }
+}

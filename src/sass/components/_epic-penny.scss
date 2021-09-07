@@ -1,0 +1,48 @@
+.epic-penny {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    background-color: $color-primary-light-2;
+    border-radius: 3px;
+    width: 30%;
+
+    @include respond(tab-port) {
+        width: 100%;
+        text-align: center;
+    }
+
+    // &:hover &__title-box{
+    //     transform: scale(1.1) translateY(-50%);
+    // }
+
+    &__img {
+        width: 100%;
+        border-radius: 3px;
+        border: 3px solid $color-primary-dark-2;
+        // &:hover{
+        //     transform: scale(1.1);
+        // }
+    }
+
+    &__title-box {
+        align-self: center;
+        transform: translateY(-50%);
+        background-color: black;
+        border-radius: 3px;
+        text-align: center;
+        padding: 1rem 0;
+        width: 80%;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        margin-bottom: auto;
+    }
+
+    &__button {
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,23 @@
+.know-penny {
+    padding: 8rem 10vw;
+    &__card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 5rem;
+
+        @include respond(tab-port){
+            grid-template-columns: none;
+            text-align: center;
+        }
+
+        &-photo {
+            width: 100%;
+            justify-self: center;
+            border-radius: 3px;
+        }
+
+        &-text {
+            font-size: 1.8rem;
+        }
+    }
+}

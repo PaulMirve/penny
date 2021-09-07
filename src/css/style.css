@@ -18,9 +18,25 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 76%;
+  }
+}
 
 body {
   box-sizing: border-box;
+  background-color: #ede0d4;
 }
 
 body {
@@ -40,15 +56,36 @@ body {
 }
 
 .heading-2 {
-  background-image: linear-gradient(to right, #ddb892, #7f5539);
+  background-image: linear-gradient(to right, #ddb892, #9c6644);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-size: 4.2em;
 }
 
+.subtitle {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
 .text-align-center {
   text-align: center;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.mb-lg {
+  margin-bottom: 10rem;
+}
+
+.mb-md {
+  margin-bottom: 5rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -58,8 +95,117 @@ body {
   justify-items: center;
   align-items: center;
 }
+@media (max-width: 56.25em) {
+  .header {
+    grid-template-columns: none;
+  }
+}
 .header__photo {
   justify-self: flex-end;
+}
+@media (max-width: 56.25em) {
+  .header__photo {
+    width: 100%;
+  }
+}
+
+.know-penny {
+  padding: 8rem 10vw;
+}
+.know-penny__card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+}
+@media (max-width: 56.25em) {
+  .know-penny__card {
+    grid-template-columns: none;
+    text-align: center;
+  }
+}
+.know-penny__card-photo {
+  width: 100%;
+  justify-self: center;
+  border-radius: 3px;
+}
+.know-penny__card-text {
+  font-size: 1.8rem;
+}
+
+.epic-pennys {
+  padding: 4rem 5vw;
+}
+.epic-pennys__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+@media (max-width: 56.25em) {
+  .epic-pennys__grid {
+    grid-template-columns: none;
+  }
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 1.2rem 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #7f5539;
+  color: white;
+  border-radius: 3px;
+  box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in;
+}
+.btn:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.epic-penny {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: #e6ccb2;
+  border-radius: 3px;
+  width: 30%;
+}
+@media (max-width: 56.25em) {
+  .epic-penny {
+    width: 100%;
+    text-align: center;
+  }
+}
+.epic-penny__img {
+  width: 100%;
+  border-radius: 3px;
+  border: 3px solid #7f5539;
+}
+.epic-penny__title-box {
+  align-self: center;
+  transform: translateY(-50%);
+  background-color: black;
+  border-radius: 3px;
+  text-align: center;
+  padding: 1rem 0;
+  width: 80%;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.epic-penny__description {
+  font-size: 1.6rem;
+  margin-bottom: auto;
+}
+.epic-penny__button {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
