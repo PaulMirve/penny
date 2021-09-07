@@ -9,7 +9,7 @@ export default function Modal({ message, isOpen, seconds }) {
                 document.getElementById('modal').classList.remove("modal-open");
             },  seconds * 1000);
         }
-    }, [isOpen]);
+    }, [isOpen, seconds]);
 
     return (
         <div id="modal" className="modal">

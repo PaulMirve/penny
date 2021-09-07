@@ -12,7 +12,7 @@ export default function App() {
     return (
         <div>
             <Router history={history}>
-                <Landing />
+                <Route exact path="/" component={Landing} />
             </Router>
             <Footer />
         </div>

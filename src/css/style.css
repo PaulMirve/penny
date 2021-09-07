@@ -148,6 +148,8 @@ body {
 }
 
 .footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: black;
   color: white;
   padding: 4rem 10vw;
@@ -155,6 +157,10 @@ body {
 }
 .footer a {
   color: white;
+  font-weight: 600;
+}
+.footer__logo {
+  justify-self: end;
 }
 
 .btn {

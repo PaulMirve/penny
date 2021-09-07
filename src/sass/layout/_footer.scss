@@ -1,10 +1,17 @@
-.footer{
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color: black;
     color: white;
     padding: 4rem 10vw;
     font-size: 1.4rem;
 
-    a{
+    a {
         color: white;
+        font-weight: 600;
+    }
+
+    &__logo{
+        justify-self: end;
     }
 }
