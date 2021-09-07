@@ -178,6 +178,9 @@ body {
   transform: translateY(-0.2rem);
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.2);
 }
+.btn:disabled {
+  background-color: #b08968;
+}
 
 .epic-penny {
   display: flex;
@@ -216,6 +219,22 @@ body {
 }
 .epic-penny__button {
   margin-top: 2rem;
+}
+
+.modal {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #7f5539;
+  color: white;
+  font-size: 1.8rem;
+  padding: 1rem 6rem;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.modal-open {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
