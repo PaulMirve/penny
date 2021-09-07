@@ -147,6 +147,16 @@ body {
   }
 }
 
+.footer {
+  background-color: black;
+  color: white;
+  padding: 4rem 10vw;
+  font-size: 1.4rem;
+}
+.footer a {
+  color: white;
+}
+
 .btn {
   border: none;
   outline: none;
