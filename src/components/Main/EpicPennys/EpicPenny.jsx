@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Button from '../../Button/Button';
 
 export default function EpicPenny({ img, title, description, onVote = () => { }, disabled }) {
     return (
@@ -8,7 +9,7 @@ export default function EpicPenny({ img, title, description, onVote = () => { },
                 {title}
             </div>
             <p className="epic-penny__description">{description}</p>
-            <button onClick={() => onVote(title)} disabled={disabled} className="btn fullwidth epic-penny__button">Votar</button>
+            <Button onClick={() => onVote(title)} disabled={disabled} className="btn fullwidth epic-penny__button">Votar</Button>
         </div>
     )
 }
