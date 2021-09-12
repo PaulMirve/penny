@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from '../../Button/Button';
 
-export default function EpicPenny({ img, title, description, onVote = () => { }, disabled }) {
+export default function EpicPenny({ photo, title, description, onVote = () => { }, disabled }) {
     return (
         <div className="epic-penny">
-            <img src={img} alt="Penny trocona" className="epic-penny__img" />
+            <img src={photo} alt="Penny trocona" className="epic-penny__img" />
             <div className="epic-penny__title-box">
                 {title}
             </div>

@@ -1,6 +1,6 @@
 export default class EpicPenny {
-    constructor(img, title, description, votes) {
-        this.img = img;
+    constructor(photo, title, description, votes) {
+        this.photo = photo;
         this.title = title;
         this.description = description;
         this.votes = votes;
