@@ -130,8 +130,8 @@ body {
 }
 .know-penny__card {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 5rem;
+  grid-template-columns: repeat(16, 1fr);
+  place-items: center;
 }
 @media (max-width: 56.25em) {
   .know-penny__card {
@@ -141,11 +141,65 @@ body {
 }
 .know-penny__card-photo {
   width: 100%;
-  justify-self: center;
+  object-fit: cover;
   border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+}
+@media (max-width: 56.25em) {
+  .know-penny__card-photo {
+    width: 40%;
+  }
+}
+.know-penny__card-photo--1 {
+  position: relative;
+  top: -2rem;
+  left: 0;
+  z-index: 3;
+}
+.know-penny__card-photo--2 {
+  right: 14rem;
+  top: 2rem;
+  z-index: 2;
+  position: absolute;
+}
+@media (max-width: 56.25em) {
+  .know-penny__card-photo--2 {
+    left: -1rem;
+    top: 0;
+  }
+}
+.know-penny__card-photo--3 {
+  left: 40%;
+  top: 6rem;
+  z-index: 1;
+  position: absolute;
+}
+@media (max-width: 56.25em) {
+  .know-penny__card-photo--3 {
+    left: 60%;
+    top: 0;
+  }
+}
+.know-penny__card-photo:hover {
+  z-index: 4;
+  transform: scale(1.1);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+.know-penny__card-frame {
+  grid-column: 2/span 4;
+  position: relative;
+}
+@media (max-width: 56.25em) {
+  .know-penny__card-frame {
+    grid-column: 1/16;
+  }
 }
 .know-penny__card-text {
   font-size: 1.8rem;
+}
+.know-penny__card-text-box {
+  grid-column: 9/-1;
 }
 
 .epic-pennys {

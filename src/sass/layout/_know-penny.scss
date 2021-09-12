@@ -1,23 +1,80 @@
 .know-penny {
     padding: 8rem 10vw;
+
     &__card {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 5rem;
+        grid-template-columns: repeat(16, 1fr);
+        place-items: center;
 
-        @include respond(tab-port){
+        @include respond(tab-port) {
             grid-template-columns: none;
             text-align: center;
         }
 
         &-photo {
             width: 100%;
-            justify-self: center;
+            object-fit: cover;
             border-radius: 3px;
+            box-shadow: 0 1rem 2rem rgba(black, 0.2);
+            transition: all 0.2s ease-in;
+
+            @include respond(tab-port) {
+                width: 40%;
+            }
+
+            &--1 {
+                position: relative;
+                top: -2rem;
+                left: 0;
+                z-index: 3;
+            }
+
+            &--2 {
+                right: 14rem;
+                top: 2rem;
+                z-index: 2;
+                position: absolute;
+
+                @include respond(tab-port) {
+                    left: -1rem;
+                    top: 0;
+                }
+            }
+
+            &--3 {
+                left: 40%;
+                top: 6rem;
+                z-index: 1;
+                position: absolute;
+
+                @include respond(tab-port) {
+                    left: 60%;
+                    top: 0;
+                }
+            }
+
+            &:hover {
+                z-index: 4;
+                transform: scale(1.1);
+                box-shadow: 0 1rem 3rem rgba(black, 0.4);
+            }
+        }
+
+        &-frame {
+            grid-column: 2 / span 4;
+            position: relative;
+
+            @include respond(tab-port) {
+                grid-column: 1 / 16;
+            }
         }
 
         &-text {
             font-size: 1.8rem;
+
+            &-box {
+                grid-column: 9 / -1;
+            }
         }
     }
 }
